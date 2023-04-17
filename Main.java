@@ -20,8 +20,8 @@ public class Main {
             int typeCommand = scanner.nextInt();
 
             if (typeCommand == 1) {
-                int x = scanner.nextInt();
-                int y = scanner.nextInt();
+                int row = scanner.nextInt();
+                int col = scanner.nextInt();
 
                 try {
                     game.rotate(x, y);
