@@ -157,7 +157,7 @@ public class Water implements ActionListener {
      *
      * @return таймаут
      */
-    public int timeout() {
+    int timeout() { // брать из первой ветки
         return timeout;
     }
 
@@ -166,33 +166,33 @@ public class Water implements ActionListener {
      *
      * @return true - если вода остановле, иначе false
      */
-    public boolean isStopped() {
-        return isStopped;
+    boolean isStopped() { // брать из второй ветки
+        return isStopped; 
     }
 
     //------  Работа со слушателями------------------------
 
     //TODO    !!!
-    List<WaterStoppedActionListener> FlowActionListeners = new ArrayList<>();
+    List<WaterStoppedActionListener> flowActionListeners = new ArrayList<>(); // брать из двух веток
 
     // присоединяет слушателя
     public void addWaterStoppedActionListener(WaterStoppedActionListener l) {
 
-        if (FlowActionListeners.contains(l) == false)
-            FlowActionListeners.add(l);
+        if (flowActionListeners.contains(l) == false)
+            flowActionListeners.add(l);
     }
 
     // отсоединяет слушателя
     public void removeFlowActionListener(WaterStoppedActionListener l) {
-        if (FlowActionListeners.contains(l)) {
-            FlowActionListeners.remove(l);
+        if (flowActionListeners.contains(l)) {
+            flowActionListeners.remove(l);
         }
     }
 
     // оповещает слушателей о событии
     public void fireWaterAction() {
-        for (WaterStoppedActionListener FlowActionListener : FlowActionListeners) {
-            FlowActionListener.waterStopped(new WaterStoppedActionEvent(this));
+        for (WaterStoppedActionListener FlowActionListener : flowActionListeners) {
+            flowActionListeners.waterStopped(new WaterStoppedActionEvent(this));
         }
     }
 
