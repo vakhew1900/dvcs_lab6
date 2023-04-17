@@ -24,7 +24,7 @@ public class Main {
                 int col = scanner.nextInt();
 
                 try {
-                    game.rotate(x, y);
+                    game.rotate(row, col);
                 } catch (IllegalArgumentException e) {
                     System.out.println("ошибка неверные данные");
                 }
