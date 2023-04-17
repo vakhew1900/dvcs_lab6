@@ -190,7 +190,7 @@ public class Water implements ActionListener {
     }
 
     // оповещает слушателей о событии
-    protected void fireWaterAction() {
+    public void fireWaterAction() {
         for (WaterStoppedActionListener FlowActionListener : FlowActionListeners) {
             FlowActionListener.waterStopped(new WaterStoppedActionEvent(this));
         }
