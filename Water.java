@@ -157,7 +157,7 @@ public class Water implements ActionListener {
      *
      * @return таймаут
      */
-    public int timeout() {
+    protected int timeout() { // брать из первой ветки
         return timeout;
     }
 
@@ -166,14 +166,14 @@ public class Water implements ActionListener {
      *
      * @return true - если вода остановле, иначе false
      */
-    public boolean isStopped() {
+    protected boolean isStopped() { // брать из второй ветки
         return isStopped;
     }
 
     //------  Работа со слушателями------------------------
 
     //TODO    !!!
-    List<WaterStoppedActionListener> FlowActionListeners = new ArrayList<>();
+    List<WaterStoppedActionListener> FlowActionListeners = new LinkedList<>(); // брать из обоих веток
 
     // присоединяет слушателя
     public void addWaterStoppedActionListener(WaterStoppedActionListener l) {
