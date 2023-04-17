@@ -83,7 +83,7 @@ public class Cell {
     /**
      * очистить клетку
      */
-    public void clear() {
+    protected void clear() { // берем из первой ветки
         this.plumbingProduct = null;
     }
 
@@ -91,7 +91,7 @@ public class Cell {
      * Проверяет заполнена ли клетка
      * @return true, если клетка заполнена, иначе false
      */
-    public boolean isFilled() {
+    protected boolean isFilled() { // берем из второй ветки
         return plumbingProduct != null;
     }
 
@@ -109,7 +109,7 @@ public class Cell {
     /**
      * Словарь Соседей. Ключ - направление, в котором расположен сосед. Значение - сам сосед
      */
-    private final Map<Direction, Cell> _neighbors = new HashMap<>();
+    private final Map<Direction, Cell> neighbors = new HashMap<>(); // берем из обоих веток.
 
     /**
      * Получить соседа по заданному направлению
