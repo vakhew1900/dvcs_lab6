@@ -26,7 +26,7 @@ public class Main {
                 try {
                     game.rotate(row, col);
                 } catch (IllegalArgumentException e) {
-                    System.out.println("ошибка неверные данные");
+                    System.out.println("Error illegal data");
                 }
 
             } else {
