@@ -75,7 +75,7 @@ public class Direction {
      * Повернуть направление по часовой
      * @return направление
      */
-    public Direction clockwise() {
+    protected Direction clockwise() { // берем из первой ветки
         return new Direction(this._angle - 90);
     }
 
@@ -83,7 +83,7 @@ public class Direction {
      * Повернуть направление против часовой
      * @return направление
      */
-    public Direction anticlockwise() {
+    protected Direction anticlockwise() { // берем из второй ветки
         return new Direction(this._angle + 90);
     }
 
@@ -91,7 +91,7 @@ public class Direction {
      * Получить противоположное направление
      * @return направление
      */
-    public Direction opposite() {
+    public Direction opposit() { // берем из двух веток.
         return new Direction(this._angle + 180);
     }
 
