@@ -7,11 +7,11 @@ public class GameField {
     /**
      * Высота игрового поля
      */
-    private int height = 10;
+    private int height = 20;
     /**
      * Ширина игрового поля
      */
-    private int width = 10;
+    private int width = 20;
 
     /**
      * Список всех клеток
