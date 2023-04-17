@@ -16,7 +16,7 @@ public class Main {
 
 
             game.printAllPipeline();
-            System.out.println("Введите 1 x y для поворота трубы в клетке (x; y). Введите 0 для запуска воды");
+            System.out.println("Enter 1 x y for rotate plumber in cell (x; y). Enter 0 for launch water");
             int typeCommand = scanner.nextInt();
 
             if (typeCommand == 1) {
