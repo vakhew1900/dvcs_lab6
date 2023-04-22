@@ -178,7 +178,7 @@ public class Game implements WaterStoppedActionListener {
 
     /**
      * Обработка события течения воды
-     * @param event - евент
+     * @param event - эвент
      */
     @Override
     public void waterStopped(WaterStoppedActionEvent event) {
